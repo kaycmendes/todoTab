@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-
+import Greeting from './Greeting'
 
 class Clock extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            time: ''
+            //set default static time
+            time: `${new Date().getHours()}:${new Date().getMinutes() < 10 ? '0' : ''}${new Date().getMinutes()}:${new Date().getSeconds() < 10 ? '0' + new Date.getSeconds() : new Date().getSeconds()}`
         }
 
     }
@@ -17,10 +18,11 @@ class Clock extends Component {
         this.setState({
             time: formatTime
         });
-        console.log(this.state.time);
-
+        
+        
     }
-    componentWillMount() {
+    //update it each 1s
+    componentDidMount() {
         setInterval(() => this.hours(), 1000)
     }
 
@@ -30,6 +32,8 @@ class Clock extends Component {
         return (
             <div className="clock">
                 {this.state.time}
+                {/* pass state to greeting component */}
+                <Greeting time={this.state.time}/>
             </div>
         )
     }
