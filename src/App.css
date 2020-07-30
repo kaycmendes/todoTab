@@ -1,11 +1,28 @@
 .greeting,
-.clock {
+.clock,
+.todolist {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
 }
+
+.remove:hover {
+  cursor: pointer;
+  stroke: rgb(141, 27, 19);
+}
+
+.add:hover {
+  stroke: rgb(85, 143, 19);
+  cursor: pointer;
+
+}
+
+.remove:hover {
+  stroke: rgb(245, 28, 13);
+}
+
 
 .clock {
   font-size: 4vw;
@@ -14,6 +31,19 @@
 .greeting,
 input {
   font-size: 3vw;
+}
+
+/* close icon  */
+
+
+li {
+  position: relative;
+  border: 1px solid;
+  list-style: none;
+  width: 20.2em;
+  height: 1.5em;
+  padding: 1em;
+  box-shadow: #d8ff7f 0.9em 0.9em;
 }
 
 input {
@@ -35,5 +65,5 @@ input:focus {
   width: 100%;
   margin: 0 auto;
   position: absolute;
-  top: 30%;
+  top: 10%;
 }

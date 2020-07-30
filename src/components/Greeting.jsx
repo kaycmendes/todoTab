@@ -84,6 +84,7 @@ class Greeting extends Component {
     return (
       <div className="greeting" >
         <h1> Good {this.dayNight()} {this.nameInput()}</h1>
+        
       </div>
     )
   }

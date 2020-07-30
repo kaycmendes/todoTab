@@ -8,7 +8,7 @@ class Clock extends Component {
             //set default static time
             time: `${new Date().getHours() === 0 ? '00' : new Date().getHours()}:${new Date().getMinutes() < 10 ? '0' : ''}${new Date().getMinutes()}` 
             // first ternary operator adds 2 zeros if midnight 
-            //second adds a zero if minutes are smaller than zero i.e '02'
+            //second adds a zero if minutes are smaller than 10 i.e '02'
         }
 
     }
@@ -33,8 +33,8 @@ class Clock extends Component {
     render() {
         return (
             <div className="clock">
-                {this.state.time}
                 {/* pass state to greeting component */}
+                {this.state.time}
                 <Greeting time={this.state.time} />
             </div>
         )
