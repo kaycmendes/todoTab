@@ -29,30 +29,52 @@ class Greeting extends Component {
 
 
   setName = (e) => {
+    let name = this.inputRef.current;
     if (e.type === 'keypress') {
-      console.log('working')
+      if (e.which === 13 || e.keyCode === 13) {
+        localStorage.setItem('name', e.target.value);
+        name.setAttribute('disabled', '')
+      }
+    }
+    
+  }
+  
+  
+  getFocus = () => {
+    if (localStorage.getItem('name') === null) {
+      this.inputRef.current.focus()
+    } else {
+      let name = this.inputRef.current;
+      name.setAttribute('disabled', '')
+      
     }
   }
-
   getName = () => {
     if (localStorage.getItem('name') === null) {
       this.inputRef.current.focus()
+    } else {
+      let name = this.inputRef.current;
+      name.value = localStorage.getItem('name')
     }
   }
 
-
+  
   events = () => {
     let name = this.inputRef.current;
-    name.addEventListener('keypress', this.setName)
-    name.addEventListener('blur', this.setName)
+    name.addEventListener("keypress", this.setName);
+    name.addEventListener('blur', this.setFocus);
   }
+
+
 
   //run
   componentDidMount() {
     let name = this.inputRef.current
     console.log(name.style);
+    this.setName(name);
     this.dayNight();
     this.getName();
+    this.getFocus()
     this.events();
   }
 
