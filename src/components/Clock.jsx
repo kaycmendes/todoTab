@@ -6,15 +6,16 @@ class Clock extends Component {
         super(props);
         this.state = {
             //set default static time
-            time: `${new Date().getHours()}:${new Date().getMinutes() < 10 ? '0' : ''}${new Date().getMinutes()}:${new Date().getSeconds() < 10 ? '0' + new Date.getSeconds() : new Date().getSeconds()}`
+            time: 'Loading...'
+            // time: `${new Date().getHours()}:${new Date().getMinutes() < 10 ? '0' : ''}${new Date().getMinutes()}:${new Date().getSeconds() < 10 ? '0' + new Date.getSeconds() : new Date().getSeconds().toLocaleString('en-US',{ hour12: false })}`.toString()
         }
 
     }
 
 
     hours() {
-        let day = new Date();
-        let formatTime = `${day.getHours()}:${day.getMinutes() < 10 ? '0' : ''}${day.getMinutes()}:${day.getSeconds() < 10 ? '0' + day.getSeconds() : day.getSeconds()}`;
+        let day = new window.Date();
+        let formatTime = `${day.getHours()}:${day.getMinutes() < 10 ? '0' : ''}${day.getMinutes()}:${day.getSeconds() < 10 ? '0' + day.getSeconds() : day.getSeconds().toLocaleString('en-US',{ hour12: false })}`;
         this.setState({
             time: formatTime
         });

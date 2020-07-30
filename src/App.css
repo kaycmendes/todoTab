@@ -1,23 +1,39 @@
-.greeting,.clock {
+.greeting,
+.clock {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
 }
-.clock{
+
+.clock {
   font-size: 4vw;
 }
 
-.greeting{
-  font-size:3vw;
+.greeting,
+input {
+  font-size: 3vw;
+}
+
+input {
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  width: 3em;
+  font-size: 4vw;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 
-.App{
-    height: 50vh;
-    width: 100%;
-    margin: 0 auto;
-    position: absolute;
-    top: 30%;
+.App {
+  height: 50vh;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 30%;
 }
