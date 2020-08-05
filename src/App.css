@@ -8,6 +8,7 @@
 
 }
 
+
 .remove:hover {
   cursor: pointer;
   stroke: rgb(141, 27, 19);
@@ -42,6 +43,7 @@ li {
   list-style: none;
   width: 20.2em;
   height: 1.5em;
+  text-align: center;
   padding: 1em;
   box-shadow: #d8ff7f 0.9em 0.9em;
 }
@@ -67,3 +69,60 @@ input:focus {
   position: absolute;
   top: 10%;
 }
+
+
+
+/* Inline #1 | http://localhost:3000/ */
+
+li {
+  text-align: center;
+}
+
+/* Inline #1 | http://localhost:3000/ */
+
+
+
+li {
+  /* width: 20.2em; */
+  /* height: 1.5em; */
+
+  text-align: center;
+  margin-left: 2em;
+  padding: 50px;
+  height: 2em;
+  top: 1px;
+  width: 10em;
+  overflow: scroll;
+}
+
+/* Element | http://localhost:3000/ */
+
+.todo>button:nth-child(2) {
+  font-size: larger;
+  background: #9d9b9b;
+  border: transparent;
+  color: white;
+  padding: 0.5em;
+  border-radius: 10px;
+}
+
+/* Element | http://localhost:3000/ */
+
+.todo {
+  text-align: center;
+}
+
+/* Element | http://localhost:3000/ */
+
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 87%;
+  margin: auto;
+  overflow: scroll;
+  height: 15em;
+}
+
+/* Element | http://localhost:3000/ */
