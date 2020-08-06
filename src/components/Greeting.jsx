@@ -1,5 +1,7 @@
 
 import React, { Component } from "react"
+const axios = require('axios');
+
 
 class Greeting extends Component {
   constructor(props) {
@@ -13,6 +15,24 @@ class Greeting extends Component {
       <input ref={this.inputRef} id="name" type="text" placeholder="Name_"></input>
     )
   }
+
+  //get a background
+
+  getDayWallpaper = (query='daylight') => {
+    const apiKey = "W5pTRRhQy7UYQ_mCXoTckolHltQ9QTad-LUq2wvEBzk";
+
+    axios.get(`https://api.unsplash.com/photos/random?query=${query}&client_id=${apiKey}&orientation=landscape`)
+      .then(res => res.data)
+      .then( data => data.urls )
+      .then(urls => console.log(urls))
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+  }
+
+
+
 
   //set dynamic greetings
   dayNight = () => {
@@ -36,17 +56,17 @@ class Greeting extends Component {
         name.setAttribute('disabled', '')
       }
     }
-    
+
   }
-  
-  
+
+
   getFocus = () => {
     if (localStorage.getItem('name') === null) {
       this.inputRef.current.focus()
     } else {
       let name = this.inputRef.current;
       name.setAttribute('disabled', '')
-      
+
     }
   }
   getName = () => {
@@ -58,7 +78,7 @@ class Greeting extends Component {
     }
   }
 
-  
+
   events = () => {
     let name = this.inputRef.current;
     name.addEventListener("keypress", this.setName);
@@ -76,6 +96,7 @@ class Greeting extends Component {
     this.getName();
     this.getFocus()
     this.events();
+    this.getDayWallpaper()
   }
 
 
@@ -84,7 +105,7 @@ class Greeting extends Component {
     return (
       <div className="greeting" >
         <h1> Good {this.dayNight()} {this.nameInput()}</h1>
-        
+
       </div>
     )
   }

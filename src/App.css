@@ -27,6 +27,7 @@
 
 .clock {
   font-size: 4vw;
+  font-weight: lighter;
 }
 
 .greeting,
@@ -53,7 +54,6 @@ input {
   border: none;
   background: transparent;
   width: 3em;
-  font-size: 4vw;
 }
 
 textarea:focus,
@@ -67,7 +67,7 @@ input:focus {
   width: 100%;
   margin: 0 auto;
   position: absolute;
-  top: 10%;
+  top: 5%;
 }
 
 
@@ -95,7 +95,7 @@ li {
   overflow: scroll;
 }
 
-/* Element | http://localhost:3000/ */
+
 
 .todo>button:nth-child(2) {
   font-size: larger;
@@ -106,13 +106,13 @@ li {
   border-radius: 10px;
 }
 
-/* Element | http://localhost:3000/ */
+
 
 .todo {
   text-align: center;
 }
 
-/* Element | http://localhost:3000/ */
+
 
 ul{
   display: flex;
@@ -125,4 +125,36 @@ ul{
   height: 15em;
 }
 
+.todo > input:nth-child(2) {
+  background: #80808054;
+  border-radius: 7px;
+  width: 6em;
+  }
+
+
+/* Inline #1 | http://localhost:3000/ */
+
+.todo > input:nth-child(2) {
+  /* border-radius: 7px; */
+  border-radius: 7px 0px 0px 7px;
+}
+
+.todo {
+  position: relative;
+}
+
 /* Element | http://localhost:3000/ */
+
+.todo > button:nth-child(3) {
+  height: 3.8vw;
+  border-radius: 0px 7px 7px 0px;
+  border: transparent;
+  position: absolute;
+}
+
+/* Element | http://localhost:3000/ */
+
+.icon {
+  width: 2vw;
+  position: sticky;
+}
