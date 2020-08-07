@@ -63,6 +63,7 @@ input:focus {
   height: 50vh;
   width: 100%;
   margin: 0 auto;
+  z-index: 2;
   position: absolute;
 }
 
@@ -141,6 +142,7 @@ ul {
   height: 100vh;
   background: url('https://images.unsplash.com/photo-1505948227007-20330e2af8ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjYzNzczfQ');
   background-repeat: round;
+  position: fixed;
   background-size: cover;
 }
 
@@ -167,7 +169,8 @@ li {
   border-radius: 15px;
   border-color: currentcolor;
   list-style-image: none;
-  background: rgba(0, 0, 0, 0.95) none repeat scroll 0% 0%;
+  background: rgba(194, 194, 194, 0.246) none repeat scroll 80% 88%;
+  filter: blur(px);
   color: white;
   display: flex;
   font-weight: bold;
@@ -182,6 +185,7 @@ li {
   top: 1px;
   width: 10em;
   overflow: scroll;
+  z-index: 3;
 }
 
 p {
@@ -189,3 +193,8 @@ p {
   height: 22%;
   position: absolute;
 }
+
+input::placeholder {
+  font-size: 0.6em;
+}
+

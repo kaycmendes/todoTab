@@ -7,8 +7,10 @@ export default class App extends Component {
     this.state = {
       term: '',
       items: [],
-      key: 0
+      key: 1
     };
+
+    this.emptyInput = React.createRef()
 
   }
 
@@ -27,13 +29,22 @@ export default class App extends Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    this.setState(prevState => ({
-      term: '',
-      items: [...this.state.items, this.state.term],
-      key: prevState.key + 1
-    }));
-    console.log(this.state.key);
+    //prevent user from adding a empty string
+    if (this.state.term !== '' && this.state.key <= 6) {
+      this.emptyInput.current.setAttribute('placeholder', "");
+
+      this.setState(prevState => ({
+        term: '',
+        items: [...this.state.items, this.state.term],
+        key: prevState.key + 1
+      }));
+      console.log(this.state.key);
+    } else {
+      this.emptyInput.current.setAttribute('placeholder', "This field is required");
+    }
   }
+
+  
 
 
 
@@ -43,7 +54,7 @@ export default class App extends Component {
       <div>
         <form className="todo" onSubmit={this.onSubmit}>
           <h2>What do you want to do?</h2>
-          <input value={this.state.term} onChange={this.onChange} />
+          <input ref={this.emptyInput} type="text" value={this.state.term} onChange={this.onChange} />
           <button>
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
