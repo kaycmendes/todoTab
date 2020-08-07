@@ -25,6 +25,12 @@
 }
 
 
+.remove {
+  float: right;
+  position: absolute;
+  right: 0;
+}
+
 .clock {
   font-size: 4vw;
   font-weight: lighter;
@@ -38,16 +44,7 @@ input {
 /* close icon  */
 
 
-li {
-  position: relative;
-  border: 1px solid;
-  list-style: none;
-  width: 20.2em;
-  height: 1.5em;
-  text-align: center;
-  padding: 1em;
-  box-shadow: #d8ff7f 0.9em 0.9em;
-}
+
 
 input {
   text-decoration: none;
@@ -67,33 +64,8 @@ input:focus {
   width: 100%;
   margin: 0 auto;
   position: absolute;
-  top: 5%;
 }
 
-
-
-/* Inline #1 | http://localhost:3000/ */
-
-li {
-  text-align: center;
-}
-
-/* Inline #1 | http://localhost:3000/ */
-
-
-
-li {
-  /* width: 20.2em; */
-  /* height: 1.5em; */
-
-  text-align: center;
-  margin-left: 2em;
-  padding: 50px;
-  height: 2em;
-  top: 1px;
-  width: 10em;
-  overflow: scroll;
-}
 
 
 
@@ -114,7 +86,7 @@ li {
 
 
 
-ul{
+ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -125,16 +97,16 @@ ul{
   height: 15em;
 }
 
-.todo > input:nth-child(2) {
+.todo>input:nth-child(2) {
   background: #80808054;
   border-radius: 7px;
   width: 6em;
-  }
+}
 
 
 /* Inline #1 | http://localhost:3000/ */
 
-.todo > input:nth-child(2) {
+.todo>input:nth-child(2) {
   /* border-radius: 7px; */
   border-radius: 7px 0px 0px 7px;
 }
@@ -145,7 +117,7 @@ ul{
 
 /* Element | http://localhost:3000/ */
 
-.todo > button:nth-child(3) {
+.todo>button:nth-child(3) {
   height: 3.8vw;
   border-radius: 0px 7px 7px 0px;
   border: transparent;
@@ -156,5 +128,64 @@ ul{
 
 .icon {
   width: 2vw;
+
+}
+
+
+/* Inline #9 | http://localhost:3000/ */
+
+.App {
+  /* height: 50vh; */
+  /* top: 5%; */
+  /* background: url(')'); */
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1505948227007-20330e2af8ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjYzNzczfQ');
+  background-repeat: round;
+  background-size: cover;
+}
+
+.greeting,
+.clock,
+.todolist {
   position: sticky;
+  top: 1em;
+}
+
+/* Element | http://localhost:3000/ */
+
+.todo>h2:nth-child(1) {
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+/* Inline #9 | http://localhost:3000/ */
+
+li {
+  /* box-shadow: rgb(99, 128, 0) 0.9em 0.9em; */
+  /* border-radius: 15px; */
+  box-shadow: rgb(99, 128, 0) 0.5em 0.5em;
+  border-radius: 15px;
+  border-color: currentcolor;
+  list-style-image: none;
+  background: rgba(0, 0, 0, 0.95) none repeat scroll 0% 0%;
+  color: white;
+  display: flex;
+  font-weight: bold;
+  text-transform: uppercase;
+  flex-direction: row;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  margin-left: 2em;
+  padding: 50px;
+  height: 2em;
+  top: 1px;
+  width: 10em;
+  overflow: scroll;
+}
+
+p {
+  width: 100%;
+  height: 22%;
+  position: absolute;
 }
