@@ -30,7 +30,7 @@ export default class App extends Component {
   onSubmit = (event) => {
     event.preventDefault();
     //prevent user from adding a empty string
-    if (this.state.term !== '' && this.state.key <= 6) {
+    if (this.state.term !== '' && this.state.key <= 5) {
       this.emptyInput.current.setAttribute('placeholder', "");
 
       this.setState(prevState => ({
@@ -52,12 +52,13 @@ export default class App extends Component {
   render() {
     return (
       <div>
+
         <form className="todo" onSubmit={this.onSubmit}>
           <h2>What do you want to do?</h2>
           <input ref={this.emptyInput} type="text" value={this.state.term} onChange={this.onChange} />
           <button>
             <span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-search" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" />
                 <circle cx="10" cy="10" r="7" />
                 <line x1="21" y1="21" x2="15" y2="15" />

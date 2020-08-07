@@ -36,6 +36,7 @@ class Clock extends Component {
                 {/* pass state to greeting component */}
                 {this.state.time}
                 <Greeting time={this.state.time} />
+                
             </div>
         )
     }

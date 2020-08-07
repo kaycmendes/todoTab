@@ -95,22 +95,18 @@ ul {
   max-width: 87%;
   margin: auto;
   overflow: scroll;
-  height: 15em;
+  height: 15vw;
+  height: 16vw;
+  padding: 2vw 1vw;
 }
 
 .todo>input:nth-child(2) {
-  background: #80808054;
-  border-radius: 7px;
+  background: #f1f1f1d6;
   width: 6em;
-}
-
-
-/* Inline #1 | http://localhost:3000/ */
-
-.todo>input:nth-child(2) {
-  /* border-radius: 7px; */
   border-radius: 7px 0px 0px 7px;
+  margin-top: 2vw;
 }
+
 
 .todo {
   position: relative;
@@ -119,10 +115,12 @@ ul {
 /* Element | http://localhost:3000/ */
 
 .todo>button:nth-child(3) {
-  height: 3.8vw;
+  height: 3.7vw;
   border-radius: 0px 7px 7px 0px;
   border: transparent;
+  background: repeating-linear-gradient(45deg, #527eb5, #f1dede8a 100px);
   position: absolute;
+  margin-top: 2vw;
 }
 
 /* Element | http://localhost:3000/ */
@@ -140,8 +138,8 @@ ul {
   /* top: 5%; */
   /* background: url(')'); */
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1505948227007-20330e2af8ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjYzNzczfQ');
-  background-repeat: round;
+  /* background: url('https://images.unsplash.com/photo-1505948227007-20330e2af8ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjYzNzczfQ'); */
+  background-repeat: no-repeat;
   position: fixed;
   background-size: cover;
 }
@@ -150,14 +148,13 @@ ul {
 .clock,
 .todolist {
   position: sticky;
-  top: 1em;
 }
 
 /* Element | http://localhost:3000/ */
 
 .todo>h2:nth-child(1) {
-  font-size: 2.5em;
-  font-weight: normal;
+  font-size: 5vh;
+  font-weight: inherit;
 }
 
 /* Inline #9 | http://localhost:3000/ */
@@ -183,7 +180,7 @@ li {
   padding: 50px;
   height: 2em;
   top: 1px;
-  width: 10em;
+  width: 11vw;
   overflow: scroll;
   z-index: 3;
 }
@@ -191,10 +188,33 @@ li {
 p {
   width: 100%;
   height: 22%;
+  text-align: center;
+  font-size: 1.4vw;
   position: absolute;
+  margin: auto;
 }
 
 input::placeholder {
   font-size: 0.6em;
 }
 
+#name {
+  text-shadow: 4px 0px 3px #7d7ff3;
+  /* background: currentColor; */
+  border-left: 2px solid #f37e7e;
+  color: white;
+  font-size: 0.6em;
+}
+
+.greeting,
+.clock,
+.todolist {
+  margin-top: 3vh;
+}
+
+.todo>h2:nth-child(1) {
+  font-size: 5vh;
+  font-weight: inherit;
+  padding: 0px;
+  margin: 0 auto;
+}
