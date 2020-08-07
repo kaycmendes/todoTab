@@ -29,6 +29,7 @@
   float: right;
   position: absolute;
   right: 0;
+  top: 2px;
 }
 
 .clock {
@@ -105,6 +106,7 @@ ul {
   width: 6em;
   border-radius: 7px 0px 0px 7px;
   margin-top: 2vw;
+  height: 3.7vw;
 }
 
 
@@ -115,7 +117,7 @@ ul {
 /* Element | http://localhost:3000/ */
 
 .todo>button:nth-child(3) {
-  height: 3.7vw;
+  height: 3.8vw;
   border-radius: 0px 7px 7px 0px;
   border: transparent;
   background: repeating-linear-gradient(45deg, #527eb5, #f1dede8a 100px);
@@ -166,7 +168,7 @@ li {
   border-radius: 15px;
   border-color: currentcolor;
   list-style-image: none;
-  background: rgba(194, 194, 194, 0.246) none repeat scroll 80% 88%;
+  background: rgba(93, 95, 98, 0.9) none repeat scroll;
   filter: blur(px);
   color: white;
   display: flex;

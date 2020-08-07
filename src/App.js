@@ -25,9 +25,10 @@ class App extends Component {
 
   //get a background
 
-  async componentWillMount() {
+  async componentDidMount() {
     //night 
     const apiKey = "bbd2cdd943c795c2ea90230d1b04552168b1e4ddc81bd87d60f7bcac3ed53bf5";
+
     await axios.get(`https://api.unsplash.com/photos/random?query=${'night'}&client_id=${apiKey}&orientation=landscape`)
       .then(res => res.data)
       .then(data => data.urls)
@@ -41,15 +42,15 @@ class App extends Component {
         console.log(error);
       })
 
-    //morning 
-    const apiKey2 = "W5pTRRhQy7UYQ_mCXoTckolHltQ9QTad-LUq2wvEBzk";
+
+    const apiKey2 = "a70408e1152b36858ed2aff1cea5b1927c2c34997aa25d5a7c30788729bede4d";
     await axios.get(`https://api.unsplash.com/photos/random?query=${'morning'}&client_id=${apiKey2}&orientation=landscape`)
       .then(res => res.data)
       .then(data => data.urls)
       .then(urls => urls.raw)
       .then(raw => this.setState({
         day: raw
-      }, () => console.log(this.state.night)
+      }, () => console.log(this.state.day)
       ))
       .catch(function (error) {
         // handle error
@@ -57,7 +58,7 @@ class App extends Component {
       })
 
 
-    //afternoon
+    //morning 
 
     const apiKey3 = "a4f7a39dd975fe7ae4dc626ac798912ce889ff417d1d54dfe2b9222f2a1a4b62";
     await axios.get(`https://api.unsplash.com/photos/random?query=${'afternoon'}&client_id=${apiKey3}&orientation=landscape`)
@@ -65,15 +66,13 @@ class App extends Component {
       .then(data => data.urls)
       .then(urls => urls.raw)
       .then(raw => this.setState({
-        day: raw
-      }, () => console.log(this.state.night)
+        afternoon: raw
+      }, () => console.log(this.state.afternoon)
       ))
       .catch(function (error) {
         // handle error
         console.log(error);
       })
-
-
 
 
 
@@ -90,7 +89,7 @@ class App extends Component {
     if (day <= 12 && day >= 6) {
       this.wallpaper.current.style.backgroundImage = `url('${this.state.day}')`;
       this.wallpaper.current.style.color = "black"
-    } else if (day > 12 && day < 17) {
+    } else if (day >= 12 && day <= 17) {
       this.wallpaper.current.style.backgroundImage = `url('${this.state.afternoon}')`;
       this.wallpaper.current.style.color = "black"
     } else {
@@ -107,10 +106,12 @@ class App extends Component {
 
   render() {
     return (
-      <div ref={this.wallpaper} className="App">
-        <Clock time={this.state.time} />
-        <Todolist />
-      </div>
+      <>
+        <div ref={this.wallpaper} className="App">
+          <Clock time={this.state.time} />
+          <Todolist />
+        </div>
+      </>
     );
   }
 }
