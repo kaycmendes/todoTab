@@ -77,8 +77,7 @@ class Greeting extends Component {
     this.getName();
     this.getFocus()
     this.events();
-    // this.getDayWallpaper()
-    // this.getNightWallpaper()
+
   }
 
 

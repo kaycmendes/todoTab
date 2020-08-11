@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       day: '',
-      night: '',
+      night: 'https://images.unsplash.com/photo-1553220662-80ea124f122f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQ5NjZ9',
       afternoon: '',
       //set default static time
       time: `${new Date().getHours() === 0 ? '00' : new Date().getHours()}:${new Date().getMinutes() < 10 ? '0' : ''}${new Date().getMinutes()}`
@@ -37,10 +37,9 @@ class App extends Component {
         night: raw
       }, () => console.log(this.state.night)
       ))
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
+      .catch(() => {
+        this.setState({ night: this.state.night })
+      });
 
 
     const apiKey2 = "a70408e1152b36858ed2aff1cea5b1927c2c34997aa25d5a7c30788729bede4d";
@@ -52,10 +51,9 @@ class App extends Component {
         day: raw
       }, () => console.log(this.state.day)
       ))
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
+      .catch(() => {
+        this.setState({ night: this.state.day })
+      });
 
 
     //morning 
@@ -77,8 +75,8 @@ class App extends Component {
 
 
     await this.dayNight()
-  }
 
+  }
 
 
 
@@ -95,7 +93,6 @@ class App extends Component {
     } else {
       this.wallpaper.current.style.backgroundImage = `url('${this.state.night}')`
       this.wallpaper.current.style.color = "white"
-      console.log(this.state.night)
     }
 
   }
@@ -112,8 +109,8 @@ class App extends Component {
           <Todolist />
         </div>
       </>
-    );
+    )
   }
-}
 
-export default App;
+}
+  export default App

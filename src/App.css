@@ -168,7 +168,7 @@ li {
   border-radius: 15px;
   border-color: currentcolor;
   list-style-image: none;
-  background: rgba(93, 95, 98, 0.9) none repeat scroll;
+  background: rgba(93, 95, 98, 0.59) none repeat scroll;
   filter: blur(px);
   color: white;
   display: flex;
@@ -191,7 +191,7 @@ p {
   width: 100%;
   height: 22%;
   text-align: center;
-  font-size: 1.4vw;
+  font-size: 1.2vw;
   position: absolute;
   margin: auto;
 }
@@ -219,4 +219,12 @@ input::placeholder {
   font-weight: inherit;
   padding: 0px;
   margin: 0 auto;
+}
+
+.clearName {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: -4px;
+  padding: 20px
 }
