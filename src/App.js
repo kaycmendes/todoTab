@@ -9,9 +9,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      day: '',
-      night: 'https://images.unsplash.com/photo-1553220662-80ea124f122f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQ5NjZ9',
-      afternoon: '',
+      day: 'https://images.unsplash.com/photo-1465359273340-4029f0d10dfc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwMDEzfQ',
+      night: 'https://images.unsplash.com/photo-1546827326-910decf5d0f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQ5NjZ9',
+      afternoon: 'https://images.unsplash.com/photo-1515587749518-60a43ef2f892?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjY5MTE5fQ',
       //set default static time
       time: `${new Date().getHours() === 0 ? '00' : new Date().getHours()}:${new Date().getMinutes() < 10 ? '0' : ''}${new Date().getMinutes()}`
       // first ternary operator adds 2 zeros if midnight 
@@ -67,10 +67,9 @@ class App extends Component {
         afternoon: raw
       }, () => console.log(this.state.afternoon)
       ))
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
+      .catch(() => {
+        this.setState({ night: this.state.afternoon })
+      });
 
 
 

@@ -222,6 +222,7 @@ input::placeholder {
 }
 
 .clearName {
+  cursor: pointer;
   position: absolute;
   display: flex;
   top: 0;
