@@ -165,7 +165,7 @@ ul {
 li {
   /* box-shadow: rgb(99, 128, 0) 0.9em 0.9em; */
   /* border-radius: 15px; */
-  box-shadow: rgb(99, 128, 0) 0.5em 0.5em;
+  box-shadow: #6a87af 0.5em 0.5em;
   border-radius: 15px;
   border-color: currentcolor;
   list-style-image: none;
