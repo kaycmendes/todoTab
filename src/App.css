@@ -104,10 +104,11 @@ ul {
 
 .todo>input:nth-child(2) {
   background: #f1f1f1d6;
-  width: 6em;
   border-radius: 7px 0px 0px 7px;
   margin-top: 2vw;
   height: 3.7vw;
+  width: 13em;
+  font-size: 1.5em;
 }
 
 
