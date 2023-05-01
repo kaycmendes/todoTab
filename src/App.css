@@ -386,3 +386,26 @@ h1 {
     border-radius: 0.2em;
     color: white;
 }
+
+/* main.76bb3494.chunk.css | https://todotab.netlify.app/static/css/main.76bb3494.chunk.css */
+
+ul {
+  max-width: none; 
+  width: 100%;
+  height: auto;
+}
+
+li {
+  
+  top: auto;
+  height: 2vh;
+}
+
+
+/* Inline #2 | http://localhost:3001/ */
+
+.clock-child {
+  border-bottom: solid 2px white;
+  background: #000000d6;
+  color: whitesmoke;
+}

@@ -29,7 +29,7 @@ class App extends Component {
     //night 
     const apiKey = "bbd2cdd943c795c2ea90230d1b04552168b1e4ddc81bd87d60f7bcac3ed53bf5";
 
-    await axios.get(`https://api.unsplash.com/photos/random?query=${'night'}&client_id=${apiKey}&orientation=landscape`)
+    await axios.get(`https://api.unsplash.com/photos/random?query=${'night blur'}&client_id=${apiKey}&orientation=landscape`)
       .then(res => res.data)
       .then(data => data.urls)
       .then(urls => urls.raw)
@@ -43,7 +43,7 @@ class App extends Component {
 
 
     const apiKey2 = "a70408e1152b36858ed2aff1cea5b1927c2c34997aa25d5a7c30788729bede4d";
-    await axios.get(`https://api.unsplash.com/photos/random?query=${'morning'}&client_id=${apiKey2}&orientation=landscape`)
+    await axios.get(`https://api.unsplash.com/photos/random?query=${'morning blur'}&client_id=${apiKey2}&orientation=landscape`)
       .then(res => res.data)
       .then(data => data.urls)
       .then(urls => urls.raw)

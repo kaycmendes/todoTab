@@ -39,8 +39,10 @@ class Clock extends Component {
     render() {
         return (
             <div className="clock">
-                {/* pass state to greeting component */}
+                <div className='clock-child'>
                 {this.state.time}
+                </div>
+                {/* pass state to greeting component */}
                 <span title="Reset name" onClick={() => this.clearName()} className="clearName">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-history" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2196F3" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" />
