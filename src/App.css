@@ -231,3 +231,134 @@ input::placeholder {
   right: -4px;
   padding: 20px
 }
+
+/* CSS for Todo app */
+
+/* Add a box shadow to the Todo list */
+.todo {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Add a hover effect to the list items */
+ul li:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+/* Add a highlight effect to the text */
+ul li p {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Add a remove button animation */
+svg.remove {
+  transition: transform 0.2s;
+}
+
+svg.remove:hover {
+  transform: scale(1.2);
+}
+
+
+h1 {
+
+  border-radius: 0.1em;
+  padding: 0.1em;
+}
+
+.todo > h2:nth-child(1) {
+  /* padding: 0px; */
+  padding: 0.1em;
+  width: fit-content;
+
+  border-radius: 0.1em;
+}
+
+.todo > button:nth-child(3) {
+  /* height: 3.8vw; */
+  height: 4.1em;
+}
+
+.todo > input:nth-child(2) {
+  /* height: 3.7vw; */
+  height: 2.2em;
+}
+
+
+
+.todo > input:nth-child(2) {
+  /* background-color: rgba(32, 35, 36, 0.84); */
+  background-color: rgba(0, 0, 0, 0.84);
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.84);
+}
+
+.todo > button:nth-child(3) {
+  /* background-image: repeating-linear-gradient(45deg, rgb(60, 95, 140), rgba(56, 24, 24, 0.54) 100px); */
+  border-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: repeating-linear-gradient(46.8deg, rgb(0, 0, 0), rgba(255, 255, 255, 0.54) 100px);
+  background-image: repeating-linear-gradient(46.8deg, rgb(0, 0, 0), rgba(255, 255, 255, 0.54) 100px);
+}
+
+li {
+
+  border-color: currentcolor;
+  list-style-image: none;
+  background-color: rgba(133, 85, 85, 0.92);
+  background-image: none;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.73) 0.5em 0.5em;
+  color: azure;
+}
+
+ul li p {
+  /* background-color: rgba(0, 0, 0, 0); */
+  background-image: linear-gradient(to right, rgba(24, 26, 27, 0), rgb(24, 26, 27) 50%, rgba(24, 26, 27, 0));
+  -webkit-text-fill-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* CSS for Todo app */
+
+/* Add a box shadow to the Todo list */
+.todo {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+/* Add a highlight effect to the text */
+ul li p {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Add a remove button animation */
+svg.remove {
+  transition: transform 0.2s;
+}
+
+svg.remove:hover {
+  transform: scale(1.2);
+}
+
+/* Add an overlay to the background image */
+.App::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.374), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1465359273340-4029f0d10dfc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwMDEzfQ');
+  background-size: cover;
+  filter: blur(5px);
+}
