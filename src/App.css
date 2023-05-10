@@ -244,7 +244,7 @@ input::placeholder {
 
 /* Add a hover effect to the list items */
 ul li:hover {
-  background-color: #f2f2f2;
+  background-color: #0b0a0a37;
   cursor: pointer;
 }
 
@@ -310,7 +310,7 @@ li {
 
   border-color: currentcolor;
   list-style-image: none;
-  background-color: rgba(133, 85, 85, 0.92);
+  background-color: #0b0a0a63;
   background-image: none;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.73) 0.5em 0.5em;
@@ -392,13 +392,14 @@ h1 {
 ul {
   max-width: none; 
   width: 100%;
-  height: auto;
+  height: 19vh;
 }
 
 li {
   
   top: auto;
   height: 2vh;
+  overflow: hidden;
 }
 
 
