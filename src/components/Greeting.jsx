@@ -29,16 +29,20 @@ class Greeting extends Component {
   }
 
   dayNight = () => {
-    let day = this.props.time.slice(0, 2)
-    if (day <= 12 && day >= 6) {
-      day = 'Morning'
-    } else if (day > 12 && day < 17) {
-      day = 'Afternoon'
+    const time = this.props.time.split(':').map(Number)
+    const hour = time[0]
+  
+    if (hour >= 6 && hour < 12) {
+      return 'Morning'
+    } else if (hour >= 12 && hour < 17) {
+      return 'Afternoon'
+    } else if (hour >= 17 && hour < 20) {
+      return 'Evening'
     } else {
-      day = 'Evening'
+      return 'Night'
     }
-    return day
   }
+  
 
 
   getFocus = () => {
