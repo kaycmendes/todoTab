@@ -82,18 +82,19 @@ class App extends Component {
 
   //set dynamic greetings
   dayNight = () => {
-    let day = this.state.time.slice(0, 2)
-    if (day <= 12 && day >= 6) {
+    const time = this.state.time.split(':').map(Number)
+    const hour = time[0]
+
+    if (hour >= 6 && hour < 12) {
       this.wallpaper.current.style.backgroundImage = `url('${this.state.day}')`;
       this.wallpaper.current.style.color = "black"
-    } else if (day >= 12 && day <= 17) {
+    } else if (hour >= 12 && hour < 17) {
       this.wallpaper.current.style.backgroundImage = `url('${this.state.afternoon}')`;
       this.wallpaper.current.style.color = "black"
-    } else {
+    } else if (hour >= 17 && hour < 20) {
       this.wallpaper.current.style.backgroundImage = `url('${this.state.night}')`
       this.wallpaper.current.style.color = "white"
     }
-
   }
 
 
@@ -112,4 +113,4 @@ class App extends Component {
   }
 
 }
-  export default App
+export default App
